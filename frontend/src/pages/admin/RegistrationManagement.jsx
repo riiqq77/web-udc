@@ -54,7 +54,7 @@ export default function RegistrationManagement() {
           </tr></thead><tbody className="divide-y divide-neutral-100 dark:divide-neutral-800">
             {data.map(d => (
               <tr key={d.id} className="hover:bg-neutral-50 dark:hover:bg-neutral-800/50 transition-colors">
-                <td className="px-6 py-3"><div><p className="text-sm font-medium text-neutral-900 dark:text-white">{d.nama_lengkap}</p><p className="text-xs text-neutral-400">{d.email}</p></div></td>
+                <td className="px-6 py-3"><div><p className="text-sm font-medium text-neutral-900 dark:text-white">{d.nama}</p><p className="text-xs text-neutral-400">{d.email}</p></div></td>
                 <td className="px-6 py-3 text-sm text-neutral-500">{d.jurusan}</td>
                 <td className="px-6 py-3"><Badge variant="primary">{d.divisi?.nama?.split(' ')[0]}</Badge></td>
                 <td className="px-6 py-3 text-sm text-neutral-500">{new Date(d.created_at).toLocaleDateString()}</td>
@@ -77,11 +77,11 @@ export default function RegistrationManagement() {
         {selected && (
           <div className="space-y-4">
             <div className="grid grid-cols-2 gap-4">
-              {[['Nama', selected.nama_lengkap], ['NIM', selected.nim], ['Email', selected.email], ['Jurusan', selected.jurusan], ['Divisi', selected.divisi?.nama], ['Status', selected.status], ['No. WA', selected.no_wa], ['Angkatan', selected.angkatan]].map(([k, v]) => (
+              {[['Nama', selected.nama], ['NIM', selected.nim], ['Email', selected.email], ['Jurusan', selected.jurusan], ['Divisi', selected.divisi?.nama], ['Status', selected.status], ['No. Telepon', selected.telepon]].map(([k, v]) => (
                 <div key={k}><p className="text-xs text-neutral-400 mb-0.5">{k}</p><p className="text-sm font-medium text-neutral-900 dark:text-white">{v || '-'}</p></div>
               ))}
             </div>
-            <div><p className="text-xs text-neutral-400 mb-1">Motivasi / Alasan</p><p className="text-sm text-neutral-600 dark:text-neutral-400">{selected.alasan_bergabung}</p></div>
+            <div><p className="text-xs text-neutral-400 mb-1">Motivasi / Alasan</p><p className="text-sm text-neutral-600 dark:text-neutral-400">{selected.motivasi}</p></div>
             {selected.cv_path && (
               <a href={`http://localhost:8000/storage/${selected.cv_path}`} target="_blank" rel="noreferrer" className="inline-block">
                 <Button variant="outline" icon={Download} size="sm">Lihat CV</Button>
