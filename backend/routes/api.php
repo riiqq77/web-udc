@@ -2,9 +2,16 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\{
-    AuthController, DashboardController, DivisiController, AnggotaController,
-    PortfolioController, BeritaController, PrestasiController,
-    PendaftaranController, PesanKontakController
+    AuthController,
+    DashboardController,
+    DivisiController,
+    AnggotaController,
+    PortfolioController,
+    BeritaController,
+    PrestasiController,
+    SettingController,
+    PendaftaranController,
+    PesanKontakController
 };
 
 // Public Routes
@@ -19,6 +26,7 @@ Route::get('/berita/{slug}', [BeritaController::class, 'show']);
 Route::get('/prestasi', [PrestasiController::class, 'index']);
 Route::post('/pendaftaran', [PendaftaranController::class, 'store']);
 Route::post('/pesan', [PesanKontakController::class, 'store']);
+Route::get('/settings', [SettingController::class, 'index']);
 
 // Protected Routes (Admin)
 Route::middleware('auth:sanctum')->group(function () {
@@ -40,4 +48,5 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::get('/pesan-kontak', [PesanKontakController::class, 'index']);
     Route::patch('/pesan-kontak/{pesanKontak}/read', [PesanKontakController::class, 'markAsRead']);
     Route::delete('/pesan-kontak/{pesanKontak}', [PesanKontakController::class, 'destroy']);
+    Route::put('/settings', [SettingController::class, 'update']);
 });
