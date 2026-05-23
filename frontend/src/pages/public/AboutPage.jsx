@@ -112,7 +112,7 @@ export default function AboutPage() {
                 <motion.div key={p.id} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
                   className="text-center">
                   {p.foto ? (
-                    <img src={`http://localhost:8000/storage/${p.foto}`} alt="" className="w-24 h-24 rounded-full mx-auto mb-3 object-cover shadow-md" />
+                    <img src={`/storage/${p.foto}`} alt="" className="w-24 h-24 rounded-full mx-auto mb-3 object-cover shadow-md" />
                   ) : (
                     <Avatar name={p.nama_lengkap} size="xl" className="mx-auto mb-3 shadow-md" />
                   )}

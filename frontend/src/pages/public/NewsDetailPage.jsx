@@ -53,7 +53,7 @@ export default function NewsDetailPage() {
             </div>
             {article.banner && (
               <div className="mb-8 rounded-2xl overflow-hidden shadow-lg">
-                <img src={`http://localhost:8000/storage/${article.banner}`} alt={article.judul} className="w-full h-auto object-cover max-h-[500px]" />
+                <img src={`/storage/${article.banner}`} alt={article.judul} className="w-full h-auto object-cover max-h-[500px]" />
               </div>
             )}
             <div className="prose prose-royal-purple dark:prose-invert max-w-none prose-img:rounded-xl prose-a:text-royal-purple-600 dark:prose-a:text-royal-purple-400" dangerouslySetInnerHTML={{ __html: article.konten }} />

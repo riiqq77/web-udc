@@ -107,7 +107,7 @@ export default function AchievementsManagement() {
                 <td className="px-6 py-3">
                   <div className="flex items-center gap-3">
                     {a.dokumentasi && (
-                      <img src={`http://localhost:8000/storage/${a.dokumentasi}`} alt="" className="w-10 h-10 object-cover rounded-lg flex-shrink-0 bg-neutral-100 dark:bg-neutral-800" />
+                      <img src={`/storage/${a.dokumentasi}`} alt="" className="w-10 h-10 object-cover rounded-lg flex-shrink-0 bg-neutral-100 dark:bg-neutral-800" />
                     )}
                     <div>
                       <p className="text-sm font-medium text-neutral-900 dark:text-white">{a.nama_lomba}</p>

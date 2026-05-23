@@ -65,7 +65,7 @@ export default function NewsPage() {
                 <div className="relative mb-12 p-8 md:p-12 bg-gradient-to-br from-royal-purple-600 to-royal-purple-800 rounded-2xl text-white overflow-hidden group">
                   <div className="absolute inset-0 bg-gradient-to-br from-transparent to-black/20 z-10" />
                   {featured.banner && (
-                    <img src={`http://localhost:8000/storage/${featured.banner}`} alt="" className="absolute inset-0 w-full h-full object-cover opacity-30 mix-blend-overlay transition-transform duration-700 group-hover:scale-105" />
+                    <img src={`/storage/${featured.banner}`} alt="" className="absolute inset-0 w-full h-full object-cover opacity-30 mix-blend-overlay transition-transform duration-700 group-hover:scale-105" />
                   )}
                   <div className="relative z-20">
                     <Badge variant="citron" className="mb-4">{featured.kategori}</Badge>
@@ -95,7 +95,7 @@ export default function NewsPage() {
                   <Card hover className="h-full overflow-hidden group">
                     <div className="h-48 bg-gradient-to-br from-neutral-100 to-neutral-200 dark:from-neutral-800 dark:to-neutral-700 flex items-center justify-center overflow-hidden">
                       {n.banner ? (
-                        <img src={`http://localhost:8000/storage/${n.banner}`} alt="" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                        <img src={`/storage/${n.banner}`} alt="" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
                       ) : (
                         <Newspaper size={36} className="text-neutral-300 dark:text-neutral-600" />
                       )}

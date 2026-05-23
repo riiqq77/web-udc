@@ -112,7 +112,7 @@ export default function NewsManagement() {
                 <td className="px-6 py-3">
                   <div className="flex items-center gap-3">
                     <div className="w-10 h-10 bg-neutral-100 dark:bg-neutral-800 rounded-lg flex items-center justify-center overflow-hidden">
-                      {n.banner ? <img src={`http://localhost:8000/storage/${n.banner}`} alt="" className="w-full h-full object-cover" /> : <Newspaper size={16} className="text-neutral-400" />}
+                      {n.banner ? <img src={`/storage/${n.banner}`} alt="" className="w-full h-full object-cover" /> : <Newspaper size={16} className="text-neutral-400" />}
                     </div>
                     <span className="text-sm font-medium text-neutral-900 dark:text-white line-clamp-1">{n.judul}</span>
                   </div>

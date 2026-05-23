@@ -78,7 +78,7 @@ export default function MembersPage() {
                       className="text-center group">
                       <div className="relative mb-4">
                         {p.foto ? (
-                          <img src={`http://localhost:8000/storage/${p.foto}`} alt="" className="w-24 h-24 rounded-full mx-auto object-cover ring-4 ring-royal-purple-100 dark:ring-royal-purple-900/30 group-hover:ring-royal-purple-300 transition-all" />
+                          <img src={`/storage/${p.foto}`} alt="" className="w-24 h-24 rounded-full mx-auto object-cover ring-4 ring-royal-purple-100 dark:ring-royal-purple-900/30 group-hover:ring-royal-purple-300 transition-all" />
                         ) : (
                           <Avatar name={p.nama_lengkap} size="xl" className="mx-auto ring-4 ring-royal-purple-100 dark:ring-royal-purple-900/30 group-hover:ring-royal-purple-300 transition-all" />
                         )}
@@ -113,7 +113,7 @@ export default function MembersPage() {
                   <motion.div key={m.id} initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ delay: i * 0.05 }}
                     className="text-center p-4 bg-white dark:bg-neutral-800 rounded-xl border border-neutral-200 dark:border-neutral-700">
                     {m.foto ? (
-                      <img src={`http://localhost:8000/storage/${m.foto}`} alt="" className="w-16 h-16 rounded-full mx-auto mb-3 object-cover" />
+                      <img src={`/storage/${m.foto}`} alt="" className="w-16 h-16 rounded-full mx-auto mb-3 object-cover" />
                     ) : (
                       <Avatar name={m.nama_lengkap} size="lg" className="mx-auto mb-3" />
                     )}

@@ -83,7 +83,7 @@ export default function RegistrationManagement() {
             </div>
             <div><p className="text-xs text-neutral-400 mb-1">Motivasi / Alasan</p><p className="text-sm text-neutral-600 dark:text-neutral-400">{selected.motivasi}</p></div>
             {selected.cv_path && (
-              <a href={`http://localhost:8000/storage/${selected.cv_path}`} target="_blank" rel="noreferrer" className="inline-block">
+              <a href={`/storage/${selected.cv_path}`} target="_blank" rel="noreferrer" className="inline-block">
                 <Button variant="outline" icon={Download} size="sm">Lihat CV</Button>
               </a>
             )}

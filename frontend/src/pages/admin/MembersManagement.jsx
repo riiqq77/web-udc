@@ -125,7 +125,7 @@ export default function MembersManagement() {
             <tbody className="divide-y divide-neutral-100 dark:divide-neutral-800">
               {data.map(m => (
                 <tr key={m.id} className="hover:bg-neutral-50 dark:hover:bg-neutral-800/50 transition-colors">
-                  <td className="px-6 py-3"><div className="flex items-center gap-3"><Avatar name={m.nama_lengkap} size="sm" src={m.foto ? `http://localhost:8000/storage/${m.foto}` : null} /><span className="text-sm font-medium text-neutral-900 dark:text-white">{m.nama_lengkap}</span></div></td>
+                  <td className="px-6 py-3"><div className="flex items-center gap-3"><Avatar name={m.nama_lengkap} size="sm" src={m.foto ? `/storage/${m.foto}` : null} /><span className="text-sm font-medium text-neutral-900 dark:text-white">{m.nama_lengkap}</span></div></td>
                   <td className="px-6 py-3"><Badge variant="primary">{m.divisi?.nama?.split(' ')[0]}</Badge></td>
                   <td className="px-6 py-3 text-sm text-neutral-500">{m.jabatan}</td>
                   <td className="px-6 py-3"><StatusBadge status={m.status} /></td>

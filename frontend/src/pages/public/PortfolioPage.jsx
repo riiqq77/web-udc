@@ -81,7 +81,7 @@ export default function PortfolioPage() {
                         <Card hover className="overflow-hidden cursor-pointer group" onClick={() => setSelected(p)}>
                           <div className="h-48 bg-gradient-to-br from-royal-purple-100 to-citron-100 dark:from-royal-purple-900/30 dark:to-citron-900/30 flex items-center justify-center overflow-hidden">
                             {p.thumbnail ? (
-                              <img src={`http://localhost:8000/storage/${p.thumbnail}`} alt="" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                              <img src={`/storage/${p.thumbnail}`} alt="" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
                             ) : (
                               <FolderOpen size={40} className="text-royal-purple-300" />
                             )}
@@ -115,7 +115,7 @@ export default function PortfolioPage() {
           <div className="space-y-4">
             <div className="h-64 bg-gradient-to-br from-royal-purple-100 to-citron-100 dark:from-royal-purple-900/30 dark:to-citron-900/30 rounded-xl flex items-center justify-center overflow-hidden">
               {selected.thumbnail ? (
-                <img src={`http://localhost:8000/storage/${selected.thumbnail}`} alt="" className="w-full h-full object-contain bg-neutral-900/5" />
+                <img src={`/storage/${selected.thumbnail}`} alt="" className="w-full h-full object-contain bg-neutral-900/5" />
               ) : (
                 <FolderOpen size={60} className="text-royal-purple-300" />
               )}
@@ -127,7 +127,7 @@ export default function PortfolioPage() {
                 {selected.anggota && (
                   <>
                     {selected.anggota.foto ? (
-                      <img src={`http://localhost:8000/storage/${selected.anggota.foto}`} alt={selected.anggota.nama_lengkap} className="w-10 h-10 rounded-full object-cover" />
+                      <img src={`/storage/${selected.anggota.foto}`} alt={selected.anggota.nama_lengkap} className="w-10 h-10 rounded-full object-cover" />
                     ) : (
                       <Avatar name={selected.anggota.nama_lengkap} size="sm" />
                     )}

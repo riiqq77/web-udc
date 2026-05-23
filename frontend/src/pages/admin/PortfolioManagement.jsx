@@ -127,7 +127,7 @@ export default function PortfolioManagement() {
                 <td className="px-6 py-3">
                   <div className="flex items-center gap-3">
                     <div className="w-10 h-10 bg-royal-purple-50 dark:bg-royal-purple-900/20 rounded-lg flex items-center justify-center overflow-hidden">
-                      {p.thumbnail ? <img src={`http://localhost:8000/storage/${p.thumbnail}`} alt="" className="w-full h-full object-cover" /> : <FolderOpen size={16} className="text-royal-purple-400" />}
+                      {p.thumbnail ? <img src={`/storage/${p.thumbnail}`} alt="" className="w-full h-full object-cover" /> : <FolderOpen size={16} className="text-royal-purple-400" />}
                     </div>
                     <div>
                       <p className="text-sm font-medium text-neutral-900 dark:text-white">{p.judul}</p>

@@ -80,7 +80,7 @@ export default function DivisionsPage() {
                               {divMembers.slice(0, 5).map(m => (
                                 <div key={m.id} className="flex items-center gap-2 px-3 py-2 bg-neutral-50 dark:bg-neutral-800 rounded-lg">
                                   {m.foto ? (
-                                    <img src={`http://localhost:8000/storage/${m.foto}`} alt="" className="w-8 h-8 rounded-full object-cover" />
+                                    <img src={`/storage/${m.foto}`} alt="" className="w-8 h-8 rounded-full object-cover" />
                                   ) : (
                                     <Avatar name={m.nama_lengkap} size="sm" />
                                   )}

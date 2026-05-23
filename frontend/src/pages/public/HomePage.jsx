@@ -175,7 +175,7 @@ export default function HomePage() {
               <motion.div key={p.id} variants={fadeUp}>
                 <Card hover className="overflow-hidden">
                   <div className="h-48 bg-gradient-to-br from-royal-purple-100 to-citron-100 dark:from-royal-purple-900/30 dark:to-citron-900/30 flex items-center justify-center overflow-hidden">
-                    {p.thumbnail ? <img src={`http://localhost:8000/storage/${p.thumbnail}`} alt="" className="w-full h-full object-cover" /> : <FolderOpen size={40} className="text-royal-purple-400" />}
+                    {p.thumbnail ? <img src={`/storage/${p.thumbnail}`} alt="" className="w-full h-full object-cover" /> : <FolderOpen size={40} className="text-royal-purple-400" />}
                   </div>
                   <CardContent className="p-5">
                     <div className="flex gap-2 mb-2">

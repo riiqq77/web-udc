@@ -88,7 +88,7 @@ export default function AchievementsPage() {
                     <p className="text-sm text-neutral-500 mb-3">{a.deskripsi}</p>
                     {a.dokumentasi && (
                       <div className="mt-2 rounded-xl overflow-hidden border border-neutral-100 dark:border-neutral-800">
-                        <img src={`http://localhost:8000/storage/${a.dokumentasi}`} alt={a.nama_lomba} className="w-full h-48 object-cover" />
+                        <img src={`/storage/${a.dokumentasi}`} alt={a.nama_lomba} className="w-full h-48 object-cover" />
                       </div>
                     )}
                   </div>
